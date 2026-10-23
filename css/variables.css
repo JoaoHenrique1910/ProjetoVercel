@@ -1,0 +1,11 @@
+:root {
+
+    --cor-principal: #ffb6bb;
+    --cor-secundaria: #ffe691;
+
+    --texto-principal: #262626;
+    --texto-alternativo: #fafafa;
+
+    --altura-header: 7.5vh;
+    --altura-footer: 15vh;
+}
