@@ -8,7 +8,17 @@
 
 }
 
+body {
+    font-family: 'Fonte Corpo';
+}
+
 .header {
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
 
     background-color: var(--cor-principal);
     color: var(--texto-principal);
@@ -26,6 +36,25 @@
     color: var(--texto-principal);
     
 
+}
+
+.logoContainer {
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.logoContainer h1 {
+
+   font-family: 'Fonte Titulo';
+}
+
+.logoContainer img {
+
+    width: auto;
+    height: calc(var(--altura-header) - 1vh);
 }
 
 .footer {
