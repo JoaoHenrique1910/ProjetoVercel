@@ -8,8 +8,20 @@
 
 }
 
+html {
+
+    scroll-behavior: smooth;
+    scroll-padding-top: var(--altura-header);
+}
+
 body {
     font-family: 'Fonte Corpo';
+    color: var(--cor-roxa);
+}
+
+a {
+
+    text-decoration: none;
 }
 
 .header {
@@ -20,39 +32,119 @@ body {
     width: 100%;
     z-index: 100;
 
-    background-color: var(--cor-principal);
-    color: var(--texto-principal);
+    background-color: var(--cor-roxa);
+    color: var(--texto-amarelo);
 
     height: var(--altura-header);
+    padding: 15px 50px;
 
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.navigation a {
-
-    text-decoration: none;
-    color: var(--texto-principal);
-    
-
-}
-
 .logoContainer {
 
     display: flex;
-    flex-direction: row;
     align-items: center;
     gap: 10px;
+    color: inherit;
+    transition: 150ms;
 }
 
 .logoContainer h1 {
 
    font-family: 'Fonte Titulo';
+   font-size: 2rem;
+   font-weight: lighter;
+   color: var(--cor-amarelo);
 }
 
 .logoContainer img {
 
     width: auto;
     height: calc(var(--altura-header) - 1vh);
+}
+
+.logoContainer:hover {
+
+    scale: 102.5%;
+}
+
+.navigation {
+
+    display: flex;
+    gap: 30px;
+
+}
+.navigation a {
+
+    color: var(--cor-branca);
+    transition: 300ms;
+
+}
+
+.navigation a:hover {
+
+    color: var(--cor-rosa)
+}
+
+.footer {
+
+    padding: 50px 50px 20px;
+    background-color: var(--cor-roxa);
+    color: var(--cor-branca);
+
+}
+
+.footerContainer {
+
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 30px;
+
+}
+
+.footerColuna {
+
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+}
+
+.footerLogo {
+
+    margin-bottom: 10px;
+    font-family: 'Fonte Titulo';
+    color: var(--cor-amarelo);
+
+}
+
+.footerColuna h3 {
+
+    margin-bottom: 15px;
+    color: var(--cor-amarelo);
+
+}
+
+.footerColuna a {
+
+    color: inherit;
+    transition: 300ms;
+    width: fit-content;
+}
+
+.footerColuna a:hover {
+
+    color: var(--cor-rosa);
+    transform: translateX(5px);
+
+}
+
+.copyright {
+
+    border-top: 1px solid var(--cor-rosa);
+    padding-top: 20px;
+    text-align: center;
 }
