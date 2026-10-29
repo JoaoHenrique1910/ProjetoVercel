@@ -8,6 +8,7 @@
     min-height: 100vh;
     padding: 120px 50px 60px 50px;
     background-color: var(--cor-amarelo);
+    position: relative;
 }
 
 .heroTexto {
@@ -51,6 +52,22 @@
 
 }
 
+.setaRolagem {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  z-index: 10;
+  animation: flutuar 2s infinite ease-in-out; 
+
+}
+
+.setaRolagem img {
+  width: 40px;
+  animation: flutuar 2s infinite ease-in-out;
+}
+
 .botao {
 
     display: inline-block;
@@ -78,16 +95,16 @@
 
 .botao:hover {
 
-    background-color: #742B2C;
-    border-color: #742B2C;
-    transform: translateX(-3px); 
+    background-color: var(--cor-vermelho-escuro);
+    border-color: var(--cor-vermelho-escuro);
+    transform: translateX(-3px);
 }
 
 .botaoSecundario:hover {
 
-   background-color: var(--cor-vermelha);
-   border-color: var(--cor-vermelha);
-   color: var(--cor-branca);
+    background-color: var(--cor-vermelha);
+    border-color: var(--cor-vermelha);
+    color: var(--cor-branca);
 
 }
 
@@ -114,15 +131,15 @@
 .madoka {
 
     position: absolute;
-    width: 80%;
-    bottom: 0;
-    left: 10%;
-    transform: translateY(-6.5%) scale(-0.75, 0.75);
+    width: 55%;
+    bottom: 40%;
+    left: 50%;
+    transform: translate(-50%, 0) scale(-0.75, 0.75);
     z-index: 2;
 
 }
 
-.pao { 
+.pao {
 
     position: absolute;
     width: 100%;
@@ -220,7 +237,7 @@
 .card:hover {
 
     transform: scale(1.05);
-    
+
 }
 
 .cardNumero {
@@ -367,3 +384,97 @@
 
 }
 
+.formulario input:focus,
+.formulario select:focus,
+.formulario textarea:focus {
+
+    outline: none;
+    border-color: var(--cor-vermelha);
+}
+
+.formulario textarea {
+
+    height: 130px;
+    resize: vertical;
+
+}
+
+.botaoEnviar {
+
+    margin-top: 10px;
+    font-family: inherit;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        padding: 190px 20px 60px;
+    }
+
+    .heroTexto,
+    .heroImagem {
+        width: 100%;
+    }
+
+    .heroTexto {
+        text-align: center;
+    }
+
+    .heroTag {
+        margin: 0 auto 20px;
+
+    }
+
+    .heroTitulo {
+        font-size: 38px;
+    }
+
+    .botaoSecundario {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+    
+    .circulo {
+        width: 250px;
+        height: 250px;
+        margin-top: 40px;
+    }
+
+    .selo {
+        width: 85px;
+        height: 85px;
+        right: 20px;   
+        font-size: 14px;
+    }
+
+    .historia,
+    .comoChegar,
+    .contato {
+        padding: 70px 20px;
+
+    }
+
+    .tituloSecao {
+        font-size: 34px;
+
+    }
+
+    .historiaConteudo,
+    .historiaCards,
+    .mapa,
+    .infoEndereco,
+    .card {
+        width: 100%;
+    }
+
+    .formulario {
+        padding: 25px;
+    }
+}
+
+@keyframes flutuar {
+  0%, 100% { transform: translate(-50%, 0); }
+  50% { transform: translate(-50%, 15px); }
+}

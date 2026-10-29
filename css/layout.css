@@ -43,6 +43,15 @@ a {
     justify-content: space-between;
 }
 
+.btnMobile {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 30px;
+    color: var(--cor-branca);
+    cursor: pointer;
+}
+
 .logoContainer {
 
     display: flex;
@@ -54,10 +63,10 @@ a {
 
 .logoContainer h1 {
 
-   font-family: 'Fonte Titulo';
-   font-size: 2rem;
-   font-weight: lighter;
-   color: var(--cor-amarelo);
+    font-family: 'Fonte Titulo';
+    font-size: 2rem;
+    font-weight: lighter;
+    color: var(--cor-amarelo);
 }
 
 .logoContainer img {
@@ -77,6 +86,7 @@ a {
     gap: 30px;
 
 }
+
 .navigation a {
 
     color: var(--cor-branca);
@@ -94,6 +104,7 @@ a {
     padding: 50px 50px 20px;
     background-color: var(--cor-roxa);
     color: var(--cor-branca);
+    min-height: var(--altura-footer);
 
 }
 
@@ -147,4 +158,52 @@ a {
     border-top: 1px solid var(--cor-rosa);
     padding-top: 20px;
     text-align: center;
+}
+
+@media (max-width: 768px) {
+    html {
+        scroll-padding-top: 170px;
+    }
+
+    .header {
+        height: auto;
+        padding: 12px 20px;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .navigation {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px 20px;
+    }
+
+    .footer {
+        padding: 40px 20px 20px;
+    }
+
+    .footerContainer {
+        flex-direction: column;
+    }
+
+    .footerColuna {
+        width: 100%;
+    }
+
+    .btnMobile {
+        display: block;
+        align-self: flex-end;
+    }
+
+    .navigation {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .navigation.ativo {
+        display: flex;
+    }
+
 }
