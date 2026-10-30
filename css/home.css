@@ -416,6 +416,38 @@
 }
 
 @media (max-width: 768px) {
+
+    .header {
+
+        height: auto;
+        padding: 12px 20px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logoContainer {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .logoContainer h1 {
+        font-size: 1.8rem;
+        transform: translateY(4px);
+    }
+
+    .btnMobile {
+        display: block;
+        margin: 0;
+    }
+
+    .navigation {
+        width: 100%;
+        margin-top: 10px;
+    }
+
     .hero {
         flex-direction: column;
         padding: 190px 20px 60px;
