@@ -4,7 +4,8 @@
 
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 60px;
     min-height: 100vh;
     padding: 120px 50px 60px 50px;
     background-color: var(--cor-amarelo);
@@ -69,7 +70,6 @@
 }
 
 .botao {
-
     display: inline-block;
     background-color: var(--cor-vermelha);
     color: var(--cor-branca);
@@ -97,7 +97,7 @@
 
     background-color: var(--cor-vermelho-escuro);
     border-color: var(--cor-vermelho-escuro);
-    transform: translateX(-3px);
+    transform: translateY(-3px);
 }
 
 .botaoSecundario:hover {
@@ -110,9 +110,7 @@
 
 .heroImagem {
 
-    width: 45%;
-    display: flex;
-    justify-content: center;
+    width: 380px;
     position: relative;
 
 }
@@ -120,8 +118,8 @@
 .circulo {
 
     width: 300px;
-    height: 380px;
-    border: 10px solid var(--cor-branca);
+    height: 330px;
+    border: 7px solid var(--cor-branca);
     border-radius: 50%;
     overflow: hidden;
     position: relative;
@@ -151,8 +149,8 @@
 .selo {
 
     position: absolute;
-    bottom: 20px;
-    right: 60px;
+    bottom: 25px;
+    right: 50px;
     z-index: 3;
 
     height: 100px;
@@ -175,6 +173,10 @@
 
     padding: 100px 50px;
     background-color: var(--cor-branca);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 
 }
 
@@ -192,15 +194,17 @@
 
 .historiaConteudo {
 
-    display: center;
+    display: flex;
     align-items: center;
     gap: 50px;
+    text-align: center;
 
 }
 
 .historiaTexto {
 
     width: 50%;
+    line-height: 2;
 
 }
 
@@ -209,6 +213,10 @@
     margin-bottom: 20px;
     font-size: 17px;
     line-height: 1.8;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    flex-direction: column;
 
 }
 
@@ -413,12 +421,13 @@
         padding: 190px 20px 60px;
     }
 
-    .heroTexto,
     .heroImagem {
-        width: 100%;
+        width: 250px;
+        margin: 40px auto 0;
     }
 
     .heroTexto {
+        width: 100%;
         text-align: center;
     }
 
@@ -439,14 +448,19 @@
     .circulo {
         width: 250px;
         height: 250px;
-        margin-top: 40px;
     }
 
     .selo {
         width: 85px;
         height: 85px;
-        right: 20px;   
+        bottom: 0;
+        right: -10px;   
         font-size: 14px;
+    }
+
+    .setaRolagem {
+
+        bottom: 10px;
     }
 
     .historia,
@@ -454,6 +468,13 @@
     .contato {
         padding: 70px 20px;
 
+    }
+
+    .historia {
+
+        display: flex;
+        align-items: center;
+        text-align: center;
     }
 
     .tituloSecao {
@@ -469,6 +490,13 @@
         width: 100%;
     }
 
+    .historiaConteudo {
+
+        display: flex;
+        flex-direction: column;
+
+    }
+
     .formulario {
         padding: 25px;
     }
@@ -476,5 +504,5 @@
 
 @keyframes flutuar {
   0%, 100% { transform: translate(-50%, 0); }
-  50% { transform: translate(-50%, 15px); }
+  50% { transform: translate(-50%, 7px); }
 }
